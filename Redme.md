@@ -1,8 +1,6 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 2 - Creating a new Project
+> Aula 3 - Criando componentes
 
-Commands:
-ng new <nomeapp>
-ng serve 
+ng generate component fomponents/firt-component

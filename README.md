@@ -1,8 +1,8 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 6 - CSS no Angular
+> Aula 7 - Diretivas do Angular
 
-Global: utilizando o arquivo styles.css, que fica em src.
-
-Scoped: estilos a nível de componente, criamos quando damos um generate.
+Recurso Diretivas
+Quem podem realizar funções no sistema, como aplicar estilos a um elemento
+Elas começam sempre com ng

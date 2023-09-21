@@ -1,11 +1,9 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 10 - Eventos no Angular
-O evento click é o mais utilizado
+> Aula 11 - Emitindo eventos
 
-(click)="algumaFuncao()"
-
-- os métodos ficam na classe
-
-Usa-se esse recurso para acerssar uma API
+Podemos comunicar eventos de um componente filho para o pai;
+Para isso vamos precisar o @Output que vai fazer a saída do evendo do componente filho;
+Na tag de invocação do componente no template, escolhemos um método para executar quando o evento for emitido;
+Exemplo: (emit)="onEmit()"

@@ -1,11 +1,14 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 12 -  Renderização de Lista
+> Aula 13 - Interfaces
 
-Loop
+Toda entidade que vamos trabalhar precisa de uma interface
 
-Vamos precisar de uma propriedade com os itens da lista
-E no template do componente vamos utilizar o *ngFor
+Isso vai tornar nosso codigo mais simples ao longo do programa
 
-*ngFor="let item of items"
+Padronizando ele e facilitando a manutenção
+
+Vamos implementar em uma interface a nossa lista de animais
+
+E fazer um evento que também utilizará este recurso.

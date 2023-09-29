@@ -1,12 +1,12 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 14 - pipe operators do Angular
+> Aula 15 - Two way data binding
 
-Os pipes operators são recursos para trabalhar com strings nos templates.
+- é um recurso muito interessante para trabalho com formulários 
 
-Podemos realizar diversas funções, como deixar o texto em caixa alta
+Basicamente conseguimos alterar props e o template com o preenchimento de inputs
 
-A sintaxe é: {{dado | algumPipeOperator}}
+é necessário importar o FormsModule no componente principal
 
-Desta maneira nos poupamos de regras de CSS ou manipulação de strings com JS
+é também declarar o ngModel no input, além de preencher também o atributo name, todos com o mesmo valor

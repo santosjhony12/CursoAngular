@@ -1,14 +1,12 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 13 - Interfaces
+> Aula 14 - pipe operators do Angular
 
-Toda entidade que vamos trabalhar precisa de uma interface
+Os pipes operators são recursos para trabalhar com strings nos templates.
 
-Isso vai tornar nosso codigo mais simples ao longo do programa
+Podemos realizar diversas funções, como deixar o texto em caixa alta
 
-Padronizando ele e facilitando a manutenção
+A sintaxe é: {{dado | algumPipeOperator}}
 
-Vamos implementar em uma interface a nossa lista de animais
-
-E fazer um evento que também utilizará este recurso.
+Desta maneira nos poupamos de regras de CSS ou manipulação de strings com JS

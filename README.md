@@ -1,15 +1,14 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 16 - Services no Angular
+> Aula 17 - ANGULAR ROUTER
 
-O service é outra parte fundamental da arquitetura do Angular
+Nós vamos criar um novo arquivo para declarar nossas rotas 
 
-Geralmente ficam as requisições para as API's que utilizam no projeto
+Nele vamos importar os módulos RouterModule e Routes
 
-Precisamos criar o service com: ng generate service <nome>
+Apos a definição estas rptas precisam ser importadas em app.module.ts
 
-Importar no componente e iniciar no construtor
+E por fim no template principal criamos as rotas
 
-Depois é possível acessar os metódos dele
-
+E substituimos os components por <router-outlet>

@@ -1,14 +1,12 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 17 - ANGULAR ROUTER
+> Aula 18 - Requisições HTTP
 
-Nós vamos criar um novo arquivo para declarar nossas rotas 
+Vamos realizar requisições HTTP nos nossos services
 
-Nele vamos importar os módulos RouterModule e Routes
+Precisamos importar dois pacotes: HttpClient e HttpHeaders
 
-Apos a definição estas rptas precisam ser importadas em app.module.ts
+Neste exemplo utilizaremos uma API local para simular as request, com json-server
 
-E por fim no template principal criamos as rotas
-
-E substituimos os components por <router-outlet>
+Por ultimo, é necessário inicializar o modulo HttpClientModule em app.module.ts

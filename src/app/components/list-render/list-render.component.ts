@@ -9,12 +9,7 @@ import { Animal } from 'src/app/Animal';
 })
 export class ListRenderComponent implements OnInit{
 
-  animals: Animal[] = [
-    {name: "Turca", type: "Dog", age: 1},
-    {name: "Tom", type: "Cat", age: 5},
-    {name: "Frida", type: "Dog", age: 7},
-    {name: "Bob", type: "Horse", age: 10}
-];
+  animals: Animal[] = [];
 
   alunos = [
     {nome: "Jhony", idade: 18, formacao: "Superior"},
@@ -31,12 +26,16 @@ export class ListRenderComponent implements OnInit{
   }
 
   constructor(private listService: ListService){
-
+    this.getAnimals()
   }
 
   removeAnimal(animal:Animal){
     console.log("Removendo Animal")
     this.animals = this.listService.remove(this.animals, animal)
+  }
+
+  getAnimals(): void{
+    this.listService.getAll().subscribe((animals)=> (this.animals = animals));
   }
 
 }

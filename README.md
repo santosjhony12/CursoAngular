@@ -1,12 +1,15 @@
 # Curso de Angular
 Mateus Batisti
 
-> Aula 15 - Two way data binding
+> Aula 16 - Services no Angular
 
-- é um recurso muito interessante para trabalho com formulários 
+O service é outra parte fundamental da arquitetura do Angular
 
-Basicamente conseguimos alterar props e o template com o preenchimento de inputs
+Geralmente ficam as requisições para as API's que utilizam no projeto
 
-é necessário importar o FormsModule no componente principal
+Precisamos criar o service com: ng generate service <nome>
 
-é também declarar o ngModel no input, além de preencher também o atributo name, todos com o mesmo valor
+Importar no componente e iniciar no construtor
+
+Depois é possível acessar os metódos dele
+

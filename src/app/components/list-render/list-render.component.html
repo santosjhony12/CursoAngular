@@ -1,10 +1,41 @@
 <div class="class">
+<h2>Clientes - API</h2>
+
+  <ul>
+    <li *ngFor="let cliente of clientes">
+      Id: {{cliente.id}} <br>
+      Nome: {{cliente.name}} <br>
+      CPF: {{cliente.cpf}}<br>
+      Senha: {{cliente.senha}}<br>
+    </li>
+  </ul>
+
+  <h2>Buscar por cpf</h2>
+
+  <form>
+    <input type="text" name="cpf" id="cpf" [(ngModel)]="cpf">
+    <button (click)="getClienteCpf()">Enviar</button>
+  </form>
+
+  <ul>
+    <li *ngIf="cliente !== null; else NotFound">
+      Id: {{cliente.id}}
+      Nome: {{cliente.name}}
+      CPF: {{cliente.cpf}}
+    </li>
+    <ng-template #NotFound>
+      <p>Nada encontrado</p>
+    </ng-template>
+  </ul>
+
+
   <h2>Animais</h2>
   <ul>
     <li *ngFor="let animal of animals">
       Nome: {{animal.name}} - Tipo: {{animal.type}}
       <button (click)="showAge(animal)">Idade</button>
       <button (click)="removeAnimal(animal)">Exluir animal</button>
+
     </li>
   </ul>
   <h3>{{animalDetails}}</h3>

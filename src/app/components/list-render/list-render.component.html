@@ -7,6 +7,7 @@
       Nome: {{cliente.name}} <br>
       CPF: {{cliente.cpf}}<br>
       Senha: {{cliente.senha}}<br>
+      <button (click)="deleteCliente(cliente)">Excluir</button>
     </li>
   </ul>
 
@@ -19,9 +20,17 @@
 
   <ul>
     <li *ngIf="cliente !== null; else NotFound">
-      Id: {{cliente.id}}
-      Nome: {{cliente.name}}
-      CPF: {{cliente.cpf}}
+      <form>
+      <label for="id">Id:</label>
+      <input type="number" name="id" id="id" disabled [(ngModel)]="cliente.id"><br>
+      <label for="name">Nome:</label>
+      <input type="text" name="name" id="name" disabled [(ngModel)]="cliente.name"><br>
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf" id="cpf" disabled [(ngModel)]="cliente.cpf"><br>
+      <label for="senha">Senha:</label>
+      <input type="text" name="senha" id="senha" [(ngModel)]="cliente.senha">
+      <button (click)="alterarSenha()">Alterar Senha</button>
+    </form>
     </li>
     <ng-template #NotFound>
       <p>Nada encontrado</p>
@@ -46,4 +55,13 @@
       Nome: {{aluno.nome}}, Idade: {{aluno.idade}}, Formação: {{aluno.formacao}}
     </li>
   </ul>
+
+
+  <h2>NOVO CADASTRO - API</h2>
+<form>
+  <input type="text" name="nome" id="nome" [(ngModel)]="novoCliente.name" required>
+  <input type="text" name="cpf" id="cpf" [(ngModel)]="novoCliente.cpf" required><br><br>
+  <input type="password" name="senha" id="senha" [(ngModel)]="novoCliente.senha" required>
+  <button (click)="addCliente()">Enviar</button>
+</form>
 </div>

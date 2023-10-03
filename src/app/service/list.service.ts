@@ -26,6 +26,26 @@ export class ListService {
   }
   getAll(): Observable<Animal[]>{
       return this.http.get<Animal[]>(this.apiUrl)
+  }
 
-}
+  addCliente(cliente: Cliente){
+    this.http.post(`${this.apiUrl}cadastroCliente`, cliente).subscribe(resultado=>{
+      console.log(resultado)},
+      erro => {if(erro.status == 404) console.log(erro)});
+
+  }
+
+  alterarSenha(cliente: Cliente){
+    this.http.put(`${this.apiUrl}alterarSenha`, cliente).subscribe(resultado=>{console.log(resultado)},
+    erro=>{if(erro.status == 404)console.log(erro)});
+  }
+
+  deleteClienteId(cliente: Cliente){
+    const confirmacao = confirm(`Tem certeza que deseja excluir o cliente ${cliente.name}?`);
+      if(confirmacao){
+        this.http.delete(`${this.apiUrl}deleteCliente/${cliente.id}`).subscribe((resultado)=>{console.log(resultado)},
+        erro=>{if(erro.status == 404) console.log(erro)})
+      }
+
+  }
 }

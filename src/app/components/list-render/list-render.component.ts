@@ -1,7 +1,7 @@
+import { Cliente } from './../../intefaces/cliente';
 import { ListService } from './../../service/list.service';
 import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/Animal';
-import { Cliente } from 'src/app/intefaces/cliente';
 
 
 @Component({
@@ -16,6 +16,12 @@ export class ListRenderComponent implements OnInit{
   cliente: Cliente | null = null;
   animalDetails = '';
   cpf: string | null = null;
+  novoCliente: Cliente = {
+    id: 0,
+    name: '',
+    cpf:'',
+    senha: ''
+  }
 
   alunos = [
     {nome: "Jhony", idade: 18, formacao: "Superior"},
@@ -38,6 +44,7 @@ export class ListRenderComponent implements OnInit{
 
   getAllClientes(): void {
     this.listService.getAllClientes().subscribe((clientes) => {this.clientes = clientes;});
+
 }
 
   removeAnimal(animal:Animal){
@@ -54,4 +61,26 @@ export class ListRenderComponent implements OnInit{
   getClienteCpf():void{
     if(this.cpf) this.listService.getClienteCpf(this.cpf).subscribe((clienteData)=> (this.cliente = clienteData));
   }
+
+  addCliente(): void{
+    this.listService.addCliente(this.novoCliente)
+    this.novoCliente = {
+      id: 0 ,
+      name: "",
+      cpf:"",senha:""};
+  }
+  alterarSenha(): void {
+    if (this.cliente) {
+      this.listService.alterarSenha(this.cliente)}
+      this.cliente = {id: 0 ,
+      name: "",
+      cpf:"",senha:""};
+  }
+
+  deleteCliente(cliente: Cliente): void{
+    if(cliente) this.listService.deleteClienteId(cliente)
+  }
+
+
+
 }
